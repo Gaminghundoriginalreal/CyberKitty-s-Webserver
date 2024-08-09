@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Kitty's Webseite</title>
+    <style>
+        /* Style.css wird hier eingebettet */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ff66b2; /* Pinker Hintergrund */
+            color: #fff;
+            text-align: center;
+        }
+        h1 {
+            background-color: #ff4d88; /* Etwas dunkleres Pink */
+            padding: 10px;
+            margin: 0;
+        }
+        .profile-container {
+            margin-top: 50px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .profile-pic:hover {
+            transform: scale(1.1);
+        }
+        .profile-info {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .profile-info p {
+            margin: 10px 0;
+        }
+        .profile-pic-expanded {
+            display: none;
+            margin-top: 20px;
+        }
+        .profile-pic-expanded img {
+            width: 300px;
+            height: 300px;
+        }
+        .flower-emoji {
+            font-size: 24px;
+        }
+        .flower-background {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .flower-background span {
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Das ist meine Webseite <3</h1>
+    <div class="profile-container">
+        <img src="https://cdn.discordapp.com/avatars/1269201108094685299/your-profile-picture.png" alt="Cyber Kitty" class="profile-pic" id="profilePic">
+        <div class="profile-info">
+            <p>Name: Cyber Kitty</p>
+            <p>Alter: 10 Jahre</p>
+            <p>🌻Kommt bitte auf Kitty World 🌹</p>
+        </div>
+    </div>
+    <div class="profile-pic-expanded" id="profilePicExpanded">
+        <img src="https://cdn.discordapp.com/avatars/1269201108094685299/your-profile-picture.png" alt="Cyber Kitty">
+    </div>
+    <div class="flower-background">
+        <!-- Blumen Emojis für Hintergrund -->
+        <span class="flower-emoji">🌸</span>
+        <span class="flower-emoji">🌼</span>
+        <span class="flower-emoji">🌷</span>
+        <span class="flower-emoji">🌺</span>
+        <span class="flower-emoji">🌻</span>
+        <span class="flower-emoji">💐</span>
+        <span class="flower-emoji">🌹</span>
+    </div>
+    <script>
+        // JavaScript für das Anzeigen des großen Profilbilds
+        document.getElementById('profilePic').addEventListener('click', function() {
+            var expandedPic = document.getElementById('profilePicExpanded');
+            if (expandedPic.style.display === 'block') {
+                expandedPic.style.display = 'none';
+            } else {
+                expandedPic.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
